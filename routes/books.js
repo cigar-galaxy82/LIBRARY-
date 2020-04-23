@@ -4,7 +4,6 @@ const Book = require('../models/book')
 const Author = require('../models/author')
 const imageMimeTypes = ['image/jpeg', 'image/png', 'images/gif']
 
-
 // All Books Route
 router.get('/', async (req, res) => {
   let query = Book.find()
@@ -75,7 +74,7 @@ function saveCover(book,coverEncoded) {
    const cover = JSON.parse(coverEncoded)
    if(cover != null && imageMimeTypes.includes(cover.type)){
      book.coverImage = new Buffer.from(cover.data,'base64')
-     book.coverImageTypes = cover.type
+     book.coverImageType = cover.type
    }
 }
 
