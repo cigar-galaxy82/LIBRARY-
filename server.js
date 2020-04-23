@@ -6,8 +6,10 @@ if (process.env.NODE_ENV !== 'production') {
   const app = express()
   const expressLayouts = require('express-ejs-layouts')
   const bodyParser = require('body-parser')
+  
   const indexRouter = require('./routes/index')
   const authorRouter = require('./routes/author')
+  const booksRouter = require('./routes/books')
   //const indexRouter = require('./routes/index')
 
   app.set('view engine', 'ejs')
@@ -24,5 +26,6 @@ if (process.env.NODE_ENV !== 'production') {
   
   app.use('/', indexRouter)
   app.use('/author', authorRouter)
+  app.use('/books', booksRouter)
 
-  app.listen(process.env.PORT || 3000) 
+  app.listen(process.env.PORT || 3000)
