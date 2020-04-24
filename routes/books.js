@@ -53,10 +53,10 @@ router.post('/', async (req, res) => {
 
 //Show Book Route
 router.get('/:id', async(req,res) => {
-   try{
-        const book = await (await Book.findById(req.params.id)
-                                      .populate('author')//populate the author varible inside of our book object with all the author information
-                                      .exec())
+   try{ 
+                  const book = await Book.findById(req.params.id)
+                  .populate('author')//populate the author varible inside of our book object with all the author information
+                  .exec()                             
         res.render('books/show', {book: book})
    }catch{
      res.redirect('/')
