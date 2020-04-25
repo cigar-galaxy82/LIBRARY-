@@ -2,7 +2,8 @@
 @import 'shared/header.css';
 @import 'shared/button.css';
 @import 'shared/form.css';
-
+@import 'shared/author.css';
+@import 'shared/books.css';
 :root{
     font-family: 'Bree Serif', serif; 
     font-size: 20px;
@@ -31,4 +32,8 @@ body{
 .page-header{
     font-size: 2rem;
     font-weight: 500;
+}
+
+.error-message{
+    color: hsl(var(--color-danger-hue), 100%, 50%);
 }
