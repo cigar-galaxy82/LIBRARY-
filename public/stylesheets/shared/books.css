@@ -41,7 +41,7 @@
     align-items: center;
     grid-gap: 1rem;
     padding-left: 35px;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto ;
   }
   
   .book-details-btn-grid {
@@ -60,3 +60,5 @@
     grid-area: author;
     justify-self: stretch;
   }
+
+  
